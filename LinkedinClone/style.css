@@ -1,0 +1,948 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+body {
+  height: 100vh;
+  width: auto;
+  /* width: 100vw; */
+  /* overflow-x: hidden; */
+  color: #5f5f5f;
+  background: #f0f2f5;
+
+  /* color: green; */
+}
+
+/* we don't want any predefined style in anchor tag so  */
+
+/*  setting up the nav bar styling */
+.navbar {
+  /* height: 30%; */
+  display: flex;
+  align-items: center;
+  /* NOTE - align content doesn't work when there is only one line of row */
+  justify-content: space-between;
+  background: #fff;
+  padding: 6px 6%; /* top-bottom   left-right*/
+  position: sticky; /* as we want this position to be there*/
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* .navbar-left,
+.navbar-right,
+.navbar-center {
+  height: 50%;
+  display: flex; */
+/* align-content: center; */
+/* align-items: center;
+} */
+
+/* nabar left changes  */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 30px;
+  margin-right: 15px;
+  display: block;
+}
+
+.search-box {
+  background: #f0f2f5;
+  width: 250px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.search-box img {
+  width: 9%;
+  width: 14px;
+  /* height: auto; */
+  z-index: 2;
+}
+
+.search-box input {
+  width: 100%;
+  background: transparent;
+  padding: 8px;
+  outline: none;
+  border: none;
+}
+/* NAV BAR center changes  */
+/*  it will remove the bullets */
+.navbar-center ul li {
+  display: inline-block;
+  list-style: none;
+}
+
+/* this will align list items and anchor tag
+ in the same horizontal line. */
+.navbar-center ul li a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  /* what happens by doing this is that the anchor tag item gets aligned to the center of list item 
+   ie it will align icons and link text  to the same line */
+  color: #5f5f5f;
+  font-size: 14px;
+  margin: 5px 8px;
+  padding-right: 5px;
+  position: relative;
+}
+
+/* to change size of icon image */
+.navbar-center ul li a img {
+  width: 30px;
+}
+
+/*  now lets change navbar-right  and change size of image of profile
+ */
+
+/* 1) WE WANT to make it radius circular and also image smaller.
+  */
+
+.nav-profile-img {
+  border-radius: 50%;
+  /* this will make it circular. */
+  width: 40px;
+  /* width : 30%*/
+  /* height: 50%; */
+  /* in order to HEIGHT property to work we have to 
+  define parent height property using px or vh then 
+  only we can use % in child. */
+  display: block;
+  cursor: pointer;
+  /* position: relative; */
+}
+
+.navbar-center ul li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #045be6;
+  position: absolute;
+  bottom: -15px;
+  transition: width 0.3s;
+}
+
+.navbar-center ul li a:hover::after {
+  /*  like here we are specifying what will change after 
+  we hover over anchor tag.  */
+  width: 100%;
+}
+.navbar-center ul li a.active-link::after {
+  width: 100%;
+}
+.online {
+  position: relative;
+}
+
+.online::after {
+  content: "";
+  /* 
+The content property in CSS is used with ::before and ::after pseudo-elements to insert additional content before or after an element's
+ content. It allows for the insertion of text, special characters, images, icons, or dynamically generated content.
+ It provides flexibility in enhancing the appearance and functionality of elements without directly modifying the HTML markup. */
+
+  width: 7px;
+  height: 7px;
+  /* we gave the same height and width to make it a square and
+    then we will easily make it circular */
+  border: 2px solid #fff;
+  border-radius: 50%;
+  right: 0;
+  top: 0;
+  background: green;
+  position: absolute;
+}
+
+/* ---------NAVBAR END--------------------- */
+
+.container {
+  padding: 20px 6%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* left-sidebar */
+.left-sidebar {
+  flex-basis: 25%;
+  align-self: flex-start;
+  position: sticky;
+  top: 73px;
+  /* ye batana padega na ki kitna portion chahte
+   hai hum dikhana sticky positonme */
+}
+
+.sidebar-profile-box {
+  background: #fff;
+}
+
+.sidebar-profile-info {
+  padding: 0 25px;
+}
+
+.sidebar-profile-info img {
+  width: 90px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 4px;
+  margin-top: -45px;
+}
+
+.sidebar-profile-info h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+}
+.sidebar-profile-info h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #777;
+}
+
+.sidebar-profile-info ul {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.sidebar-profile-info ul li {
+  width: 100%;
+  margin: 5px 0;
+  font-size: 13px;
+}
+
+.sidebar-profile-info ul li span {
+  float: right; /* this will make */
+  color: #045be6;
+}
+
+.sidebar-profile-link {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #ccc;
+}
+.sidebar-profile-link a {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0;
+  font-size: 13px;
+  border-left: 1px solid #ccc;
+}
+/* applying some style to only first link using first child */
+.sidebar-profile-link a :first-child {
+  border-left: 0;
+}
+.sidebar-profile-link a img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+/* now sidebar activity where it shows what i was searching */
+.sidebar-activity {
+  /* ye side bar activity wala div we will make its background white*/
+  color: #fff;
+  padding: 5px 25px;
+  margin: 12px 0;
+}
+.sidebar-activity h3 {
+  color: #777;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 20px 0 10px;
+}
+.sidebar-activity a {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  /* ye sab ko inspect krke size daal sakte hai 
+  . */
+  font-weight: 500;
+  color: #888;
+  margin: 3px 0;
+}
+.sidebar-activity a img {
+  width: 20px;
+  margin-right: 10px;
+}
+.discover-more-link {
+  border-top: 1px solid #ccc;
+  text-align: center;
+  margin: 20px 25px 0 -25px;
+}
+.discover-more-link a {
+  color: #045be6;
+  display: inline-block;
+  margin: 10px 0;
+}
+/* ---------right-sidebar---------- */
+.right-sidebar {
+  flex-basis: 25%;
+  align-self: flex-start;
+  position: sticky;
+  top: 73px;
+  /* ye batana padega na ki kitna portion chahte
+   hai hum dikhana sticky positonme */
+}
+
+/* now align them properly */
+
+.sidebar-news {
+  background: #fff;
+  padding: 10px 25px;
+}
+.info-icon {
+  width: 15px;
+  float: right;
+  margin-top: 15px;
+}
+.sidebar-news h1 {
+  color: black;
+}
+
+.sidebar-news h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 10px 0 30px;
+}
+.sidebar-news a {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 10px;
+  /* use ctrl+enter to quickly move to next line  */
+  margin-bottom: 2px;
+}
+.sidebar-news span {
+  font-size: 12px;
+}
+.sidebar-news .read-more-link {
+  color: #045be6;
+  font-weight: 500;
+  margin: 20px 0 10px;
+}
+/* .side bar ad  */
+.sidebar-ad {
+  background: #fff;
+  padding: 15px 25px;
+  text-align: center;
+  margin: 12px 0;
+  font-size: 12px;
+  /* position: absolute; */
+}
+.sidebar-ad img {
+  width: 60px;
+  border-radius: 50%;
+  margin: 4px;
+}
+.sidebar-ad small {
+  float: right;
+  font-weight: 500;
+}
+.sidebar-ad p {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.sidebar-ad b {
+  display: block;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.ad-link {
+  display: inline-block;
+  /* So, in your case, giving the custom button-like element a "display: inline" property 
+  causes it to overlap with the text inside the ".sidebar-ad b" element because the
+   "display: block" property of the latter prevents any other element from being placed alongside it horizontally. */
+  border: 1px solid #045be6;
+  border-radius: 30px;
+  padding: 5px 15px;
+  color: #045be6;
+  font-weight: 500;
+  margin: 20px auto 10px;
+}
+
+.sidebar-useful-links {
+  padding: 15px 25px;
+  text-align: center;
+}
+.sidebar-useful-links a {
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+}
+.copyright-msg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.copyright-msg img {
+  width: 80px;
+  margin-right: -8px;
+}
+/* -------------------main-content---------------- */
+.main-content {
+  flex-basis: 47%;
+}
+.create-post {
+  background: #fff;
+}
+
+.create-post-input {
+  padding: 20px 25px 10px;
+  display: flex;
+  align-items: center;
+}
+.create-post-input img {
+  width: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+/* Placing the image tag after the text area ensures that the text area takes 100% width, allowing the image tag 
+to occupy the remaining space without conflicts.
+This positioning order allows the image tag to maintain a fixed width of 35px while 
+the text area expands to fill the available width within the parent div. */
+.create-post-input textarea {
+  width: 100%;
+  border: 1px solid black;
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.8);
+  padding: 14px 0 2px 0;
+  border-radius: 35px;
+  /* justify-content: left; */
+  padding-left: 1.2rem;
+  outline: 0;
+  /* what is a outline? */
+  resize: none;
+  background: transparent;
+  margin-top: 8px;
+}
+
+.create-post-links {
+  display: flex;
+  align-items: flex-start;
+}
+.create-post-links li {
+  list-style: none;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  flex-basis: 25%;
+  /* as there are 4 items */
+  height: 40px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* now decrease width of icon */
+.create-post-links li img {
+  width: 15px;
+  margin-right: 5px;
+}
+.create-post-links li:last-child {
+  /* this will select last element of list */
+  background: #045be6;
+  color: #fff;
+  /* border-top: 0;
+  border-right: 0; */
+}
+.sort-by {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.sort-by hr {
+  flex: 1;
+  height: 1px;
+  background: #ccc;
+}
+.sort-by p {
+  font-size: 13px;
+  padding-left: 5px;
+}
+.sort-by p span {
+  font-weight: 600;
+  cursor: pointer;
+}
+.sort-by span img {
+  width: 12px;
+  margin-left: 3px;
+}
+/* styling the post */
+.post {
+  background: #fff;
+  padding: 20px 25px 5px;
+  margin: 5px 0 15px;
+}
+.post-author {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.post-author img {
+  width: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.post-author h1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: -2px;
+}
+.post-author small {
+  display: block;
+  margin-bottom: -2px;
+}
+
+.post p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.post-stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 6px;
+}
+.post-stats div {
+  display: flex;
+  align-items: center;
+}
+.post-stats img {
+  width: 15px;
+  margin-right: -5px;
+}
+
+.liked-users {
+  margin-left: 10px;
+}
+
+.post-activity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+.post-activity div {
+  display: flex;
+  align-items: center;
+}
+.post-activity-user-icon {
+  width: 22px;
+}
+.post-activity-link img {
+  width: 18px;
+  margin-right: 8px;
+}
+
+/* drop down menu PROFILE */
+.profile-menu-wrap {
+  position: absolute;
+
+  /* this will make the div at the bottom of the navbar menu
+   */
+  max-height: 0;
+  /* because i want to use transistion animation thats why */
+  overflow: hidden;
+  transition: max-height 0.4s;
+  top: 100%;
+  right: 5%;
+  width: 320px;
+  /* transition: height 0.1s; */
+}
+
+.profile-menu-wrap.open-menu {
+  max-height: 400px;
+}
+
+.profile-menu {
+  background: #222;
+  color: #fff;
+  padding: 20px;
+  margin: 10px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info img {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.user-info h3 {
+  font-weight: 500;
+  margin-bottom: -7px;
+}
+.user-info a {
+  color: #c9dbf8;
+  font-size: 13px;
+}
+.profile-menu hr {
+  height: 1px;
+
+  width: 100%;
+  background: white;
+  margin: 15px 0 10px;
+}
+
+.profile-menu-link {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+.profile-menu-link p {
+  width: 100%;
+}
+.profile-menu-link img {
+  width: 35px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+/* ------------------------profile-page second html page------------------ */
+
+.profile-main {
+  flex-basis: 73%;
+}
+.profile-sidebar {
+  flex-basis: 25%;
+  align-self: flex-start;
+  position: sticky;
+  top: 73px;
+  /* top: 73%; */
+}
+
+.profile-container {
+  background: #fff;
+}
+
+.profile-container-inner {
+  padding: 0 4% 10px;
+}
+
+.profile-pic {
+  width: 150px;
+  border-radius: 50%;
+  margin-top: -75px;
+  padding: 5px;
+  background: #fff;
+}
+
+.profile-container h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #222;
+}
+.profile-container b {
+  font-weight: 500;
+}
+.profile-container p {
+  margin-top: 5px;
+}
+.profile-container p a {
+  color: #045be6;
+  font-weight: 500;
+}
+
+/* mutual connection wala   */
+.mutual-connection {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.mutual-connection img {
+  width: 30px;
+  border-radius: 50%;
+}
+
+.profile-btn {
+  margin: 20px 0;
+}
+
+.profile-btn a {
+  display: inline-flex;
+  align-items: center;
+  background: #e4e6eb;
+  padding: 6px 15px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+.profile-btn a img {
+  width: 17px;
+  margin-right: 5px;
+}
+
+.profile-btn .primary-btn {
+  background: #045be6;
+  color: #fff;
+}
+
+.profile-description {
+  background: #fff;
+  padding: 20px 4% 30px;
+  margin: 12px 0;
+}
+.profile-description h2 {
+  color: #333;
+  margin: 10px 0 20px;
+  font-weight: 600;
+}
+
+.see-more-link {
+  display: block;
+  text-align: right;
+  font-size: 15px;
+}
+
+.profile-desc-row {
+  display: flex;
+  align-items: flex-start;
+  margin: 20px 0;
+}
+
+.profile-desc-row img {
+  width: 50px;
+  margin-right: 25px;
+  margin-top: 5px;
+}
+.profile-desc-row div {
+  width: 100%;
+}
+
+.profile-desc-row h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+.profile-desc-row b {
+  display: block;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.profile-desc-row p {
+  margin-top: 15px;
+  line-height: 1.5;
+}
+.profile-desc-row hr {
+  border: 0;
+  border-bottom: 1px solid #999;
+  margin-top: 10px;
+}
+
+.experience-link {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  padding-top: 20px;
+  font-weight: 500;
+}
+
+.experience-link img {
+  width: 20px;
+  margin-left: 8px;
+}
+.profile-description h3,
+.profile-description b {
+  margin-bottom: 7px;
+}
+
+.skills-btn {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 6px 18px;
+  border: 1px solid #777;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.language-btn {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 6px 18px;
+  background: #e4e6eb;
+  font-size: 12px;
+  font-weight: 500;
+}
+/* ----------profile-right-sidebar------------ */
+.profile-sidebar .sidebar-ad {
+  margin: 0;
+}
+
+.sidebar-people {
+  background: #fff;
+  padding: 15px 25px;
+  margin: 12px 0;
+  font-size: 12px;
+}
+.sidebar-people h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.sidebar-people-row {
+  display: flex;
+  align-items: flex-start;
+  margin: 6px 0;
+}
+.sidebar-people-row img {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 8px;
+  /* padding-top: 15px; */
+  margin-top: 10px;
+}
+
+.sidebar-people-row h2 {
+  font-weight: 500;
+  font-size: 16px;
+}
+.sidebar-people-row a {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 5px 25px;
+  border: 1px solid #5f5f5f;
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+.profile-footer {
+  padding: 0 6% 30px;
+}
+
+.profile-footer .sidebar-useful-links {
+  text-align: left;
+  padding: 0;
+}
+
+.profile-footer .copyright-msg {
+  justify-content: flex-start;
+}
+
+#showMoreLink {
+  display: none;
+}
+
+/* --------------now we make it responsive------------------ */
+
+/* media query for small screen */
+
+@media only screen and (max-width: 600px) {
+  /* this css is only applicable to the screen which is 600px or less not more than that */
+  .search-box {
+    background: transparent;
+    width: auto;
+    padding: 0;
+  }
+  .search-box input {
+    width: 0;
+    padding: 0;
+  }
+  .navbar-center li a span {
+    display: none;
+  }
+
+  .navbar-center li a {
+    padding-right: 0;
+    margin: 5px;
+  }
+
+  .nav-profile-img {
+    width: 30px;
+  }
+  /* above styling was for navbar */
+
+  .container {
+    padding: 15px 3%;
+  }
+
+  .left-sidebar,
+  .right-sidebar {
+    flex-basis: 100%;
+    position: relative;
+    /* position: absolute; */
+    /* now this will bring the element to the normal flow */
+    top: unset;
+    /* top: 0px; */
+  }
+
+  /* So, with top: 0px;, you're specifically saying "Put the toy at the top." But with top: unset;, you're saying
+  "Put the toy somewhere inside, but it can vary based on the box's rules." */
+
+  .main-content {
+    flex-basis: 100%;
+  }
+  .post-stats div {
+    margin: 2px 0;
+  }
+  /*  */
+  .post-activity-link span {
+    display: none;
+  }
+  .post-activity-link img {
+    width: 18px;
+    margin-right: 69px;
+  }
+
+  /* ..........now for profile page css............. */
+
+  .profile-main,
+  .profile-sidebar {
+    flex-basis: 100%;
+  }
+
+  .profile-container {
+    font-size: 14px;
+  }
+  .profile-pic {
+    width: 100px;
+    margin-top: -50px;
+  }
+  .profile-description {
+    font-size: 14px;
+  }
+  /* now i want to hide recent  activity , so lets add toggle button */
+  #showMoreLink {
+    display: block;
+    width: fit-content;
+    font-size: 14px;
+    margin: 10px auto;
+    cursor: pointer;
+  }
+}

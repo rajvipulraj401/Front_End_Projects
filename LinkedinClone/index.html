@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linkedin clone</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- first upper nav section  -->
+    <nav class="navbar">
+      <div class="navbar-left">
+        <a href="index.html" class="logo">
+          <img src="linkedin-webpage-img\images\logo.png" alt="logo-img" />
+        </a>
+
+        <div class="search-box">
+          <!-- how do we put a search bar and its icon 
+                well it looks like a form and that prewritten text
+             of placeholder 
+             -->
+          <img src="linkedin-webpage-img/images/search.png" alt="searchIcon" />
+
+          <input type="text" placeholder="Search" />
+          <!-- img  , input are self closing tag -->
+        </div>
+      </div>
+
+      <div class="navbar-center">
+        <ul>
+          <li>
+            <a href="#" class="active-link">
+              <img src="linkedin-webpage-img/images/home.png" alt="" />
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="linkedin-webpage-img/images/network.png" alt="" />
+              <span>My Network</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="linkedin-webpage-img/images/jobs.png" alt="" />
+              <span>Jobs</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="linkedin-webpage-img/images/message.png" alt="" />
+              <span>Messaging</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="linkedin-webpage-img/images/notification.png" alt="" />
+              <span>Notifications</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="navbar-right">
+        <div class="online">
+          <img
+            src="linkedin-webpage-img/images/user-1.jpg"
+            alt=""
+            class="nav-profile-img"
+          />
+        </div>
+      </div>
+
+
+      <!-- -------------profile-drop-down-menu---------------- -->
+    <div class="profile-menu-wrap">
+
+      <div class="profile-menu">
+        <div class="user-info">
+          <img src="linkedin-webpage-img/images/user-1.jpg" alt="">
+
+        <div>
+          <h3>Dark Balerion</h3>
+          <a href="profile.html">See your profile</a>
+        </div>
+        </div>
+        <hr>
+
+        <a href="#" class="profile-menu-link">
+          <img src="linkedin-webpage-img/images/feedback.png" alt="">
+          <p>Give feedback</p>
+          <span>></span>
+        </a>
+        <a href="#" class="profile-menu-link">
+          <img src="linkedin-webpage-img/images/setting.png" alt="">
+          <p>Settings & Privacy</p>
+          <span>></span>
+        </a>
+        <a href="#" class="profile-menu-link">
+          <img src="linkedin-webpage-img/images/help.png" alt="">
+          <p>Help & Support</p>
+          <span>></span>
+        </a>
+        <a href="#" class="profile-menu-link">
+          <img src="linkedin-webpage-img/images/display.png" alt="">
+          <p>Display & Accessibility</p>
+          <span>></span>
+        </a>
+        <a href="#" class="profile-menu-link">
+          <img src="linkedin-webpage-img/images/logout.png" alt="">
+          <p>Logout</p>
+          <span>></span>
+        </a>
+      </div>
+    </div>
+    
+    
+    </nav>
+
+    <!-- navbar close -->
+
+    <div class="container">
+      <!-- ----------left sidebar------ -->
+      <div class="left-sidebar">
+        <div class="sidebar-profile-box">
+          <img
+            src="linkedin-webpage-img/images/cover-pic.png"
+            width="100%"
+            alt="cover-pic"
+          />
+          <div class="sidebar-profile-info">
+            <img src="linkedin-webpage-img/images/user-1.jpg" alt="" />
+            <h1>Dark Balerion</h1>
+            <h3>Web Developer</h3>
+            <ul>
+              <li>Your profile views <span>52</span></li>
+              <li>Your post views <span>1210</span></li>
+              <li>Your connections <span>252</span></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-profile-link">
+            <a href="#"
+              ><img src="linkedin-webpage-img/images/items.png" alt="" />My
+              items</a
+            >
+            <a href="#"
+              ><img src="linkedin-webpage-img/images/premium.png" alt="" />Try
+              premium</a
+            >
+          </div>
+        </div>
+        <div class="sidebar-activity" id="sidebarActivity">
+          <h3>RECENT</h3>
+          <a href="#"
+            ><img src="linkedin-webpage-img/images/recent.png" alt="" />Web
+            Development</a
+          >
+          <a href="#"
+            ><img src="linkedin-webpage-img/images/recent.png" alt="" />User
+            Interface</a
+          >
+          <a href="#"
+            ><img src="linkedin-webpage-img/images/recent.png" alt="" />Online
+            Learning</a
+          >
+          <a href="#"
+            ><img src="linkedin-webpage-img/images/recent.png" alt="" />Learn
+            Online</a
+          >
+          <a href="#"
+            ><img src="linkedin-webpage-img/images/recent.png" alt="" />Code
+            Better</a
+          >
+          <a href="#"
+            ><img src="linkedin-webpage-img/images/recent.png" alt="" />Group
+            Learning</a
+          >
+          <h3>GROUPS</h3>
+          <a href="#"
+            ><img src="linkedin-webpage-img/images/group.png" alt="" />Web
+            Design Group</a
+          >
+          <a href="#"
+            ><img src="linkedin-webpage-img/images/group.png" alt="" />HTML &
+            CSS Learners</a
+          >
+          <a href="#"
+            ><img src="linkedin-webpage-img/images/group.png" alt="" />Python &
+            JavaScript</a
+          >
+          <a href="#"
+            ><img src="linkedin-webpage-img/images/group.png" alt="" />Learn
+            Coding Online</a
+          >
+          <h3>HASHTAG</h3>
+          <a href="#"
+            ><img
+              src="linkedin-webpage-img/images/group.png"
+              alt=""
+            />webdevelopment</a
+          >
+          <a href="#"
+            ><img
+              src="linkedin-webpage-img/images/group.png"
+              alt=""
+            />userinterface</a
+          >
+          <a href="#"
+            ><img
+              src="linkedin-webpage-img/images/group.png"
+              alt=""
+            />onlinelearning</a
+          >
+          <div class="discover-more-link">
+            <a href="#">Discover more</a>
+          </div>
+        </div>
+
+        <p id="showMoreLink" onclick="toggleActivity()">Show more <b>+</b></p>
+      </div>
+      <!-- -------------main content----------- -->
+  <div class="main-content">
+
+        <div class="create-post">
+          <div class="create-post-input">
+            <img src="linkedin-webpage-img/images/user-1.jpg" alt="">
+            <textarea  rows="2" placeholder="Start a post"></textarea>
+          </div>
+          <div class="create-post-links">
+            <li><img src="linkedin-webpage-img/images/photo.png" alt="">photo</li>
+            <li><img src="linkedin-webpage-img/images/video.png" alt="">Video</li>
+            <li><img src="linkedin-webpage-img/images/event.png" alt="">Event</li>
+            <li>Post</li>
+          </div>
+        </div>
+
+        <div class="sort-by">
+          <hr>
+          <p>Sort by: <span>top <img src="linkedin-webpage-img/images/down-arrow.png" alt=""></span></p>
+        </div>
+<!-- now lets add post content in the main content in our website -->
+      <div class="post">
+
+          <div class="post-author">
+            <img src="linkedin-webpage-img/m.jpg" alt="">
+            <div>
+              <h1>Michael Scott</h1>
+              <small>Manager at Dunder Mifflin Paper Company</small>
+              <small>2 hours ago</small>
+            </div>
+          </div>
+          <p>Crafting an irresistible website require deep understanding of needs, igniting passion, and leaving a lasting impression that keeps them coming back for more. That's what she said ... </p>
+          <img src="linkedin-webpage-img/post.png" width="100%%" alt="">
+          <div class="post-stats">
+            <div>
+            <img src="linkedin-webpage-img/images/thumbsup.png" alt="">
+            <img src="linkedin-webpage-img/images/love.png" alt="">
+            <img src="linkedin-webpage-img/images/clap.png" alt="">
+            <span class="liked-users">Dwight Schrute and 69 others</span>
+            </div>
+            <div>
+              <span> 221 comments &middot;52 shares</span>
+            </div>
+          </div>
+          
+        <div class="post-activity">
+          <div>
+            <img src="linkedin-webpage-img/images/user-1.jpg" class="post-activity-user-icon" alt="">
+            <img src="linkedin-webpage-img/images/down-arrow.png" class="post-activity-arrow-icon" alt="">
+          </div>
+          <div>
+            <div class="post-activity-link">
+
+              <img src="linkedin-webpage-img/images/like.png" alt="">
+              <span>Like</span>
+            </div>
+          </div>
+          <div>
+            <div class="post-activity-link">
+
+            <img src="linkedin-webpage-img/images/comment.png" alt="">
+            <span>Comment</span>
+            </div>
+          </div>
+          <div>
+            <div class="post-activity-link">
+
+            <img src="linkedin-webpage-img/images/share.png" alt="">
+            <span>Share</span>
+            </div>
+          </div>
+          <div>
+            <div class="post-activity-link">
+
+            <img src="linkedin-webpage-img/images/send.png" alt="">
+            <span>Send</span>
+          </div>
+          </div>
+        </div>
+       </div> 
+
+
+
+
+
+       <div class="post">
+
+        <div class="post-author">
+          <img src="linkedin-webpage-img/ch.jpg" alt="">
+          <div>
+            <h1>Chandler Bing</h1>
+            <small>statistical analysis and data reconfiguration at Transpondster Company</small>
+            <small>2 hours ago</small>
+          </div>
+        </div>
+        <p>Join me, Chandler Bing, at Transpondster, the epicenter of witty innovation. As the Chief Sarcasm Officer, I blend my quick wit with tech brilliance, creating a workplace where humor fuels creativity. Let's rewrite the tech narrative, one sarcastic comment at a time!</p>
+        <img src="linkedin-webpage-img/pp.jpg" width="100%%" alt="">
+        <div class="post-stats">
+          <div>
+          <img src="linkedin-webpage-img/images/thumbsup.png" alt="">
+          <img src="linkedin-webpage-img/images/love.png" alt="">
+          <img src="linkedin-webpage-img/images/clap.png" alt="">
+          <span class="liked-users">Monica Geller and 1 others</span>
+          </div>
+          <div>
+            <span> 1 comment &middot;1 share</span>
+          </div>
+        </div>
+        
+      <div class="post-activity">
+        <div>
+          <img src="linkedin-webpage-img/images/user-1.jpg" class="post-activity-user-icon" alt="">
+          <img src="linkedin-webpage-img/images/down-arrow.png" class="post-activity-arrow-icon" alt="">
+        </div>
+        <div>
+          <div class="post-activity-link">
+
+            <img src="linkedin-webpage-img/images/like.png" alt="">
+            <span>Like</span>
+          </div>
+        </div>
+        <div>
+          <div class="post-activity-link">
+
+          <img src="linkedin-webpage-img/images/comment.png" alt="">
+          <span>Comment</span>
+          </div>
+        </div>
+        <div>
+          <div class="post-activity-link">
+
+          <img src="linkedin-webpage-img/images/share.png" alt="">
+          <span>Share</span>
+          </div>
+        </div>
+        <div>
+          <div class="post-activity-link">
+
+          <img src="linkedin-webpage-img/images/send.png" alt="">
+          <span>Send</span>
+        </div>
+        </div>
+      </div>
+     </div> 
+
+
+
+
+
+
+
+
+     <div class="post">
+
+      <div class="post-author">
+        <img src="linkedin-webpage-img/t.jpg" alt="">
+        <div>
+          <h1>Thomas Shelby</h1>
+          <small> Tech Visionary & Chief Innovator at ShelbyTech Solutions</small>
+          <small>2 hours ago</small>
+        </div>
+      </div>
+      <p>At ShelbyTech Solutions, we believe in harnessing the power of technology for positive social impact. Join us in raising awareness for mental health by supporting #Tech4Mindfulness. Together, we can build a more mindful and resilient tech community. Let's make a difference today! 💙 </p>
+      <img src="linkedin-webpage-img/post3.jpg" width="100%%" alt="">
+      <div class="post-stats">
+        <div>
+        <img src="linkedin-webpage-img/images/thumbsup.png" alt="">
+        <img src="linkedin-webpage-img/images/love.png" alt="">
+        <img src="linkedin-webpage-img/images/clap.png" alt="">
+        <span class="liked-users">Alfie Solomons and 3349 others</span>
+        </div>
+        <div>
+          <span> 234 comments &middot;123 shares</span>
+        </div>
+      </div>
+      
+    <div class="post-activity">
+      <div>
+        <img src="linkedin-webpage-img/images/user-1.jpg" class="post-activity-user-icon" alt="">
+        <img src="linkedin-webpage-img/images/down-arrow.png" class="post-activity-arrow-icon" alt="">
+      </div>
+      <div>
+        <div class="post-activity-link">
+
+          <img src="linkedin-webpage-img/images/like.png" alt="">
+          <span>Like</span>
+        </div>
+      </div>
+      <div>
+        <div class="post-activity-link">
+
+        <img src="linkedin-webpage-img/images/comment.png" alt="">
+        <span>Comment</span>
+        </div>
+      </div>
+      <div>
+        <div class="post-activity-link">
+
+        <img src="linkedin-webpage-img/images/share.png" alt="">
+        <span>Share</span>
+        </div>
+      </div>
+      <div>
+        <div class="post-activity-link">
+
+        <img src="linkedin-webpage-img/images/send.png" alt="">
+        <span>Send</span>
+      </div>
+      </div>
+    </div>
+   </div> 
+
+
+     
+
+
+
+
+
+
+
+   
+   <div class="post">
+
+    <div class="post-author">
+      <img class="mich" src="linkedin-webpage-img/tyler.jpg" alt="">
+      <div>
+        <h1>Tyler Durden</h1>
+        <small>Chief Disruptive Innovator at TechnoMinds Solutions</small>
+        <small>2 hours ago</small>
+      </div>
+    </div>
+    <p>Join us at TechnoMinds Solutions and unleash your untamed potential. We're not just a company; we're a movement that challenges the norms, disrupts the status quo, and empowers individuals to break free from the constraints of conventional thinking. Let's revolutionize the tech world together </p>
+    <img src="linkedin-webpage-img/working tyler.webp" width="100%%" alt="">
+    <div class="post-stats">
+      <div>
+      <img src="linkedin-webpage-img/images/thumbsup.png" alt="">
+      <img src="linkedin-webpage-img/images/love.png" alt="">
+      <img src="linkedin-webpage-img/images/clap.png" alt="">
+      <span class="liked-users">Marla Singer and 7281 others</span>
+      </div>
+      <div>
+        <span> 3221 comments &middot;982 shares</span>
+      </div>
+    </div>
+    
+  <div class="post-activity">
+    <div>
+      <img src="linkedin-webpage-img/images/user-1.jpg" class="post-activity-user-icon" alt="">
+      <img src="linkedin-webpage-img/images/down-arrow.png" class="post-activity-arrow-icon" alt="">
+    </div>
+    <div>
+      <div class="post-activity-link">
+
+        <img src="linkedin-webpage-img/images/like.png" alt="">
+        <span>Like</span>
+      </div>
+    </div>
+    <div>
+      <div class="post-activity-link">
+
+      <img src="linkedin-webpage-img/images/comment.png" alt="">
+      <span>Comment</span>
+      </div>
+    </div>
+    <div>
+      <div class="post-activity-link">
+
+      <img src="linkedin-webpage-img/images/share.png" alt="">
+      <span>Share</span>
+      </div>
+    </div>
+    <div>
+      <div class="post-activity-link">
+
+      <img src="linkedin-webpage-img/images/send.png" alt="">
+      <span>Send</span>
+    </div>
+    </div>
+  </div>
+ </div> 
+
+
+
+
+
+
+      </div>
+      <!-- ------------right-content----------- -->
+      <div class="right-sidebar">
+        <div class="sidebar-news">
+          <img
+            src="linkedin-webpage-img/images/more.png"
+            class="info-icon"
+            alt=""
+          />
+          <h1>Linkedin News</h1>
+          <a href="#">High demand for skilled manpower</a>
+          <span>1d ago &middot; 10,934 readers</span>
+
+          <a href="#">Careers growing horizontally too</a>
+          <span>19h ago &middot; 1,552 readers</span>
+
+          <a href="#">Less work visa for US, more for UK</a>
+          <span>1d ago &middot; 27,290 readers</span>
+
+          <a href="#">More hiring = higher confidence?</a>
+          <span>18h ago &middot; 8,208 readers</span>
+
+          <a href="#">Gautam Adani is the world's third richest</a>
+          <span> 12h ago &middot; 4,205 readers</span>
+
+          <a href="#" class="read-more-link">Read More</a>
+        </div>
+        <div class="sidebar-ad">
+          <small>Ad &middot; &middot; &middot;</small>
+          <p>Master the 5 principles of Web Design</p>
+
+          <div>
+            <img src="linkedin-webpage-img/images/user-1.jpg" alt="" />
+            <img src="linkedin-webpage-img/images/mi-logo.png" alt="" />
+          </div>
+          <b>Brand and Demand in Xiaomi</b>
+          <a href="#" class="ad-link">Learn More</a>
+        </div>
+
+        <div class="sidebar-useful-links">
+          <a href="#">About</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Help Center</a>
+          <a href="#">Advertising</a>
+          <a href="#">Get the App</a>
+          <a href="#">Get the App</a>
+          <a href="#">More</a>
+          <div class="copyright-msg">
+            <img src="linkedin-webpage-img/logo.png" alt="">
+            <p>Linkedin corporation &#169 2023</p>
+          </div>
+        </div>
+      </div>
+      <!-- upar wala right sidebar end  -->
+    </div>
+    <!-- container div end here -->
+
+
+
+    <script>
+
+      
+const moreLink = document.querySelector("#showMoreLink");
+let sideActivity = document.querySelector("#sidebarActivity");
+
+
+function toggleActivity() {
+  sideActivity.classList.toggle("open-activity");
+}
+    </script>
+  </body>
+  <script src="index.js"></script>
+
+</html>
