@@ -1,0 +1,995 @@
+
+
+
+* {
+  box-sizing: border-box
+   /* THIS  is better in comparison of content-box as we don't have to
+   think about border and padding */
+  margin: 0;
+  padding: 0;
+}
+
+body{
+
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100vw;
+
+}
+
+/* 1)  bODY header*/
+
+#body-header {
+/*HEre i have added a background image in my header section
+ and then i have decide how much height i want it */
+
+  background-image: url(images/header.jpg);
+   /*
+     in ORDER to add a background image in css we can also use css shorthand property for background
+      rather than using full property . */
+ height: 90vh;
+ width: 100vw;
+background-repeat: no-repeat;
+background-size:cover;
+background-position: center;
+backface-visibility: visible;
+opacity: 0.9;
+background-attachment: fixed; /* isse ye hoga ki background image hatega nahi
+ humesha fixed rhega bs neeche ka content sab hatega  */
+
+}
+
+#my-name {
+  font-size:  3.4rem;
+  text-align: center;
+  font-family: 'Sacramento', serif;
+  color: azure;
+
+}
+
+.text-center{
+  text-align: center; /* i am  making all text in center and i am just adding THIS
+   class in horizontal-list only */
+}
+
+
+
+/*  2) THE RULE FOR HORIZONT LIST*/
+
+.horizontal-list{
+
+  list-style: none;  /* isse humlog list ka style hata denge jaise maan lo
+   unordered list me dot aur ordered me numbering ye sab*/
+
+  font-weight: bold;
+  font-size: 18px;
+
+ padding-left:   0;
+ margin: 0; /*upar se margin hataye hai*/
+ padding-top: 20px;
+
+
+  /* THIS IS USED TO CENTER THE texts very very imo*/
+}
+
+
+/* now we want to make display  of all the list item in unordered list
+ as inline  so , go inside class horizontal list and then in that go inside every
+  list and then change the display property
+    */
+.horizontal-list li{  /*  This is nesting in class we are changind something inside
+   the class element*/
+  display: inline-block;
+  margin: 0 10px 10px  0;
+
+}
+
+.horizontal-list li a{
+  color: white;
+  text-decoration: none;
+
+}
+ /* USIng hover pseudo class */
+.nav-menu li a:hover {
+  transition: color 0.4s ; /*  it is used to add some cool effect it will take some time
+  to show its effect*/
+   border-bottom :1s ;
+
+}
+
+
+
+
+.horizontal-list li a:hover {
+  text-decoration: underline;
+  color: #FF4500;
+
+}
+
+/* 3) name and social media icon in the header */
+
+
+
+.icons-name  li { /* bina nesting ke nahi lega yaha batana padega ki mujhe
+    icons name class ke  list ka style change krna hai*/
+  list-style: none;
+  display: inline-block;
+
+}
+
+.social-icons li a img{
+  padding-left: 2px;
+  padding-right: 5px;
+  background-color: azure;
+  margin-left: 10px;
+/*  font-size: 4rem; */
+  border-radius: 50%; /* to make circular radius of icons see the project */
+
+}
+
+
+.social-icons  img:hover{
+box-shadow: /*shaadow will be towards right*/0 0/*shadow will be towards bottom*/ 6px 4px lightgreen;  /*this helps to add shadow and it takes 4 value like
+/*horizontaloff set and verticaloffset , blur , spread and color*/
+
+}
+/*.icons-name ul li {
+padding-left: 20px;
+}*/
+
+
+
+
+
+
+ /* HEADER COMpleted*/
+
+
+/*3)  NOW main menu all the navigation sections */
+
+section{
+  width: 100vw;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  justify-content: space-evenly; /* here we will add align  items only
+   order property of flex are given in child property so all the
+    other property like align , justify , direction all are specified in parent
+     div */
+}
+
+
+
+
+
+
+#about{
+
+  height: auto;
+  width: 100%;
+}
+
+#my-image{
+  height:12rem;
+  width:12rem;
+  margin: auto; /*this will help to make it in center our image*/
+
+  margin-top: -30vh; /*giving negative margin will take the image upwards*/
+  position :relative;
+}
+
+#my-image img {
+  height: 150%;
+  width: 150%; /*i am making it 150% from the parent div*/
+  border-radius: 50%;
+  box-shadow: 0 0 6px 4px white;
+}
+
+
+#about-para{
+  margin-top: 30px;
+  padding: 90px;
+  font-weight: bold;
+  font-style:normal;
+  font-family:cursive;
+  font-size: 1.4rem;
+
+  width: auto;
+  height: auto;
+
+}
+
+
+
+section:nth-child(2n){
+    background-color: lightgrey;
+}
+
+
+
+/* this is a pseudo class used to make every
+     alteranting element add some different styling */
+
+
+/*
+section:nth-child(2n+1){
+  background-color: white;
+}
+
+*/
+
+
+
+
+/*now skills section */
+
+#skills
+{
+height: 88vh;
+
+}
+
+#skills h1 span{
+  margin-bottom: 8px;
+  margin-top: 10px;
+}
+.section-heading{
+  width:auto;
+  padding: 20px 10px 10px;
+/*  margin:10px auto; */
+/* now  no need to give margin to the section heading as it
+ will be centralized according to the
+  align-items properties of flex */
+  font-weight: 400;
+}
+.section-heading span{
+  font-size: 40px;
+  color: #2857a4;
+  display: inline-block;
+  padding-top: 10px;
+  margin-right: 0.5rem;
+}
+
+
+
+.skills-display{
+
+  margin-bottom: 40px;
+  width:70%;
+
+  /*height:100px;
+  border:2px solid black;
+*/
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+}
+
+.skill-progress{
+
+  width: 11rem;
+  height: 2.1rem;
+  background-color: white;
+  border-radius:2rem;
+
+ /* border: 10px;*/
+  margin: 10px;
+}
+
+.skill-progress>div{
+
+  border-radius: 20px 0px 0px 20px;
+}
+
+.skill-name span{
+  color:white;
+  font-size: 1.8rem;
+  margin-left: 10px;
+  margin-bottom: 13px;
+  margin-top: -15px;
+}
+
+
+
+
+
+
+
+          /* education section */
+
+
+
+
+.closeheading{
+position: relative;
+top: 40px;
+}
+
+#education h1 span {
+
+  margin-top: 35px;
+}
+#education{
+  height: 101vh;
+  width: 100vw;
+  position: relative;
+  bottom: 75px;
+
+}
+
+.timeline{
+  position: relative;
+  bottom: 10px;
+  height: 810px;
+  /*border: 2px solid black;*/
+  width: 90vw;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.timeline div{
+
+  overflow: visible;
+
+}
+.timeline-box{
+     width: 40%;
+     box-sizing: border-box;
+ /* border-box dene se jitna hum dimensionn specify kiye
+     hai usi me sabko border aur padding ko barabar de deta hai  iss 480px main div ko daale aur 160 px andar wale ka dimesnion specify kiye
+       toh kaam kr jayega aise agr content box hota  toh nahi krta   kyunki usme border padding aur margin ka sabme alag alag letaa */
+     position: relative;
+     height: 180px;
+     left: 5%;
+     margin: 5px;
+    /* border: 2px solid black; */
+     overflow: hidden;
+
+}
+/* now we want to alternate the boxes in timline
+so for that we have seen a pseudo class called nth child*/
+
+.timeline-box:nth-child(2n){
+left:53%;
+/* mtlb parent ke left ke 53% bhai */
+}
+
+.timeline-divider{
+  position: absolute;
+  width: 0;
+  top: 9%;
+  left: 50%;
+  height:  68%;
+  border: 1px dashed #433E3F   ;
+  opacity: 0.88;
+  z-index: 0;
+
+}
+
+.timeline-divider .timeline-traveller{
+position: sticky;
+top: 135px;
+z-index: 1;
+
+
+}
+
+.timeline-divider img{
+  margin-left:  -11.2px;
+  z-index: 2;
+}
+
+
+.timeline-box::after {
+  content: '';
+  position: absolute;
+
+  width: 15px;
+  height: 15px;
+  background-color: skyblue;
+  top: 25%;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+
+
+.timeline-box:nth-child(2n+1)::after {
+  right: -13%;
+}
+
+.timeline-box:nth-child(2n)::after {
+  left: -10%;
+}
+/*  what is z index */
+
+
+
+/* NOW TIMELINE EDUCATION -BOXES content */
+
+
+
+
+.timeline-box{
+   overflow:visible;
+}
+
+.degree{
+
+  color:blue;
+  text-align: right;
+  margin: 0;
+  margin-bottom: 1px;
+}
+
+
+.in{
+
+  color:orange;
+  text-align: right;
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin: 0;
+}
+
+
+.time{
+
+
+  margin: 0;
+  text-align: right;
+}
+
+
+.description{
+
+
+  text-align: justify;
+font-size: 17px;
+padding: 2px;
+  color:  black;
+line-height: 20px;
+}
+
+
+
+/* portfolio section*/
+
+
+
+
+
+#portfolio h1 {
+
+  margin-top:  -180px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* CONTACT Section*/
+
+
+.contactimg{
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+
+#contact {
+  background-color: #0abcf9;
+  /*background-image: linear-gradient(50deg, #2857a4 0%, #403066 74%);*/
+
+  /*instead use shorthand property*/
+
+  background: linear-gradient(50deg, #2857a4 0%, #403066 74%);
+
+  /*yaha pe linear gradient use kiye
+    aur 50 degree pe se color ghumake rkhe hai*/
+  color: white;
+  padding-bottom: 90px;
+  margin-bottom:0;
+  width: 100vw;
+  height: 95vh;
+
+
+
+
+}
+
+
+#contact h1 span{
+  color: white;
+  margin-top: -60px;
+}
+
+#contact-container{
+
+
+  display: flex;
+  flex-direction: row;
+}
+
+
+#contact-form-container{
+  height: 50%;
+  width: 50%; /*hum yaha 50% height rkhe hai contact-form-container ko main
+   parent contact-form ke */
+   margin-bottom: 50px;
+}
+
+/*#contact-form input  textarea  {
+  height: 30%;
+  max-width: 90%;
+  margin: 15px;
+  padding: 20px;
+  background-color: #0abcf9;
+
+
+  background: linear-gradient(50deg, #2857a4 0%, #403066 74%);
+
+}*/
+
+#contact-form input, textarea {
+  max-width: 90%;
+  margin: 15px;
+  margin-bottom: 10px;
+  padding: 4px 10px;
+  border: 0px solid transparent;
+  border-bottom: 2px solid white;
+  color: #d9dcdd;
+  background: transparent;
+  width: 90%;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+#contact-form button[type="submit"] {
+
+background: transparent;
+
+/* if we want to put background color in this button then
+we have to put the background to transparent */
+
+margin-left: 80px;
+
+padding: 15px;
+margin-top: 20px;
+
+border: 2px solid white;
+color: white;
+font-weight: bold;
+font-size: medium;
+
+}
+/*
+#input-message{
+height: 30%;
+  max-width: 90%;
+}
+
+*/
+
+
+#my-detail-container{
+  margin-left: 4%;
+  width: 40%;
+}
+
+
+.my-details-info-container img {  /* do nesting*/
+
+ position:relative;
+ top: 7px;
+
+}
+
+
+
+.resizing{
+  position:relative;
+  top: 7px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  nav menu items */
+
+
+
+
+.dropdown-menu{
+  display: none;
+}
+
+
+.dropdown-list{
+  margin: 0;
+    display: inline-block;
+    background-color: #828470;
+    position: relative;
+    right: 2%;
+    bottom: 10px;
+
+
+}
+
+
+
+
+           /* applying media query to make it view better on
+
+   phone screen  and all smaller screens*/
+
+
+   @media screen and (max-width:600px){
+
+    /* jab screen width 600px ya usse kam ho tab
+    */
+
+    .timeline-divider{
+
+      left:2.5%;
+    }
+
+    .timeline-box{
+
+       left: 5%;
+       width: 90%;
+    }
+
+    .timeline-box:nth-child(2n){
+      left:5%;
+      /* mtlb parent ke left ke 53% bhai */
+      }
+
+
+      .timeline-box:nth-child(2n+1)::after {
+
+        left: -5%;
+      }
+
+      .timeline-box:nth-child(2n)::after {
+        left: -5%;
+      }
+
+        html{
+          font-size: 11px;
+        }
+
+        #body-header {
+
+          height: 60vh;
+          width: 100vw;
+
+        }
+        #skills{
+          height: 78vh;
+        }
+
+        #about{
+          height: 27vh;
+        }
+
+        #my-image{
+          height: 12rem;
+          margin-top: 10px;
+          margin-bottom: 1rem;
+          margin-left: 10px;
+          margin-top: -12vh;
+        }
+
+        #about-para{
+          margin-top: 1px;
+          padding: 65px;
+         /* margin-left: 2rem;*/
+
+        }
+
+        #education h1 span{
+          margin-top:  30px;
+        }
+
+
+        #portfolio h1 {
+
+          margin-top:  -200px;
+
+        }
+        #contact{
+          height: 90vh;
+        }
+
+        #contact h1 span{
+          margin-top: 30px;
+        }
+
+        #skills h1 span {
+          margin-top: -10px;
+        }
+
+        #contact-container{
+
+
+          display: block;
+
+        }
+
+        #contact-form-container{
+          height: 50%;
+          width: 90%; /*hum yaha 50% height rkhe hai contact-form-container ko main
+           parent contact-form ke */
+           margin-bottom: 50px;
+        }
+
+
+
+        #contact-form button[type="submit"] {
+          background: transparent;
+         margin-left: 120px;
+       }
+
+        #my-detail-container{
+         margin-left: 4%;
+         width: 90%;
+        }
+
+        .chotkap{
+        font-size: 13px;
+
+        }
+
+
+
+        .skills-display{
+
+          margin-bottom: 40px;
+          width:70%;
+          /*height:100px;
+          border:2px solid black;
+        */
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        }
+
+
+        .skill-progress{
+
+          width: 15rem;
+          height: 3.5rem;
+
+
+
+         /* border: 10px;*/
+          margin: 16px;
+        }
+
+
+  .skill-name span{
+  color:white;
+  font-size: 2.2rem;
+
+  padding-top: 90px;
+
+  text-align: center;
+}
+
+
+.horizontal-list{
+
+  list-style: none; /* isse humlog list ka style hata denge jaise maan lo
+   unordered list me dot aur ordered me numbering ye sab*/
+
+  font-weight: bold;
+  font-size: 18px;
+
+ padding-left:   0;
+ margin: 0; /*upar se margin hataye hai*/
+ padding-top: 20px;
+
+
+  /* THIS IS USED TO CENTER THE texts very very imo*/
+}
+
+
+.dropdown-list{
+  display: none;
+}
+
+
+
+
+
+/* IN order to create a drop down menu*/
+
+
+
+.hidden{
+  display: none;
+}
+
+
+/* name aur social conatiner ko thora neeche krenge */
+
+#name-social-container{
+
+  position: relative;
+  display: inline-block;
+  top: 80px;
+  left: 150px;
+}
+
+
+/* shifting body image to little above*/
+#body-header{
+  position: relative;
+  bottom: 0px;
+}
+
+
+/* now making the dropdown-menu visible*/
+
+.dropdown-menu {
+  display: inline-block;
+
+
+}
+
+
+.text-right{
+  text-align: right;
+  position: absolute;
+  right: 2.5%;
+
+}
+
+
+
+/*
+.dropdown-menu .bars .neecheaa:hover .dropdown-list{
+
+  /*why it is not working when i am trying to hover using this way*/
+
+
+  .dropdown-menu:hover .dropdown-list{
+
+  display: inline-block;
+
+  }
+
+
+
+.dropdown-list li a{
+
+  color: white;
+  position: relative;
+  right: 18%;
+  bottom: 5%;
+  opacity: 0.7;
+  font-size: 1.7rem;
+  text-decoration: none;
+
+}
+
+
+.no-list-style{
+  list-style: none;
+}
+
+
+.dropdown-list li a:hover {
+
+  display: inline-block;
+
+
+  text-decoration: underline;
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* percent classes will lie here*/
+
+.eighty-five-percent{
+
+  width: 85%;
+  height: inherit;
+   /* INHERIT MEANS TO TAKE THE SAME PROPERTY AS
+   THE PARENT SO here eighty five percent height is same as  skill progress div
+   */
+
+
+/*  background-color: blue;
+  border-radius: 0.8rem;
+  */
+}
+
+.sixty-five-percent{
+
+  width: 65%;
+  height: inherit;
+
+}
+
+.thirty-eight-percent{
+  width:38%;
+  height: inherit;
+}
+
+
+.mb-cyan{
+  background-color: cyan;
+
+}
+
+
+.mb-blue{
+   background-color: blue;
+}
+
+.mb-lightgreen{
+  background-color: lightgreen;
+}
+
+.mb-orange{
+  background-color: orange;
+
+}
+
+.mb-red{
+  background-color: red;
+}
+
+
+/* common margin classes*/
+.mb75px{
+  margin-bottom: 75px;
+}
+
+
+
+/* common color classes*/
+
+.text-higlight{
+  color: #2857a4;
+  font-weight: 600;
+
+}

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- this is a meta tag which will help us in writing code -->
+
+    <title>  My resume </title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="images/faviconcv.png" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+
+  </head>
+
+
+  <body>
+
+   <header id="body-header">
+
+
+
+          <!-- navigation bar this will take us to different page rather
+         more clearly if we say it take us to different section -->
+
+
+          <!-- also nav is div semantic tag SO IT has block property -->
+            <!-- we will add
+           an unordered list .
+            and also we will add an anchor tag so that we can navigate to that
+             list item .
+         -->
+
+
+<nav>
+
+
+
+
+  <div class = "dropdown-menu text-right">
+    <div class="bars">
+        <img class="neecheaa" src="images/menu.png" alt="bar">
+    </div>
+    <div class ="dropdown-list nav-menu">
+        <ul class = "no-list-style">
+            <li >
+                <a href="#"> Home </a>
+            </li>
+            <li>
+                <a href="#about"> About </a>
+            </li>
+            <li>
+                <a href="#skills"> Skills </a>
+            </li>
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+            <li>
+                <a href="#education">Education</a>
+            </li>
+            <li>
+                <a href="#portfolio">Portfolio</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+        </div>
+
+ </div>
+
+
+
+  <ul class="hidden horizontal-list text-center nav-menu">
+    <li>  <a href="#"> Home     </a></li>
+    <li>  <a href="#about"> About    </a></li>
+    <li>  <a href="#skills"> Skills   </a></li>
+    <li>  <a href="#projects"> Projects </a></li>
+    <li>  <a href="#education"> Education</a></li>
+    <li>  <a href="#contact"> Contact  </a></li>
+    <li>  <a href="#portfolio"> portfolio </a></li>
+
+     <!-- what is use of # here ?
+
+
+    IT is going to take us to that section JUST one hash means to the same home page or
+   you can say root page .
+
+ 2) and for other it is linking us to that section. -->
+
+
+  </ul>
+</nav>
+  <!-- NOW i want to add name and icons and it will be in horizontal
+ list -->
+
+
+ <div id="name-social-container">
+   <div class="text-center">
+      <h1 id="my-name"> Vipul Raj
+       </h1>
+   </div>
+
+
+   <div class="icons-name">
+     <ul class="horizontal-list text-center social-icons">
+
+      <li  > <a href="https://www.linkedin.com/in/vipul-raj-00a0101b6/">
+        <img src="images/in.png"  alt="linkedin"></a> </li>
+
+      <li> <a href="https://twitter.com/DarkBalerion69">
+         <img src="images/twitter.png" alt="twitter"></a> </li>
+
+         <li> <a href="https://github.com/rajvipulraj401">
+          <img src="images/github.png" alt="github">
+         </a></li>
+     </ul>
+   </div>
+
+
+ </div>
+
+
+
+
+   <!-- NOw as we know nav is a div element so it is block element
+   so the list will appear vertically . now we would have to change its display
+  property from block to inline block -->
+
+
+
+   </header>
+
+    <main>
+
+
+        <section id = "about">
+         <!-- about section -->
+          <div id="my-image">
+            <img src="images/vipul.png" alt="">
+
+          </div>
+
+<div id ="about-para">
+
+      <p>
+        I am a Frontend   developer and a keen learner
+         who is on verge of getting better and better .
+      </p>
+
+</div>
+
+        </section>
+
+        <section id="skills">
+         <!--  -->
+          <h1 class="section-heading  mb75px">
+            <!--  we have added two different classes
+             because section- heading will be similar for all the
+                other section so we will not have to give dimensions of them
+                each time-->
+
+          <!-- we have added two classes background color and margin -->
+        <span>
+        <img class="resizing" src="images/skill.png" alt="">
+
+         </span>
+          <!-- here we have added font awesome icon
+          -->
+         <span> SKILLS </span>
+
+         </h1>
+
+            <div class="skills-display">
+
+
+              <div class="skill-progress">
+
+                <div class=" eighty-five-percent mb-blue">
+
+                    <div class="skill-name">
+                    <span>html</span>
+
+                    </div>
+
+                </div>
+
+
+
+              </div>
+
+
+
+              <div class="skill-progress">
+
+                <div class=" sixty-five-percent mb-lightgreen">
+                  <div class="skill-name">
+                    <span>css</span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <div class="skill-progress">
+
+                <div class=" thirty-eight-percent mb-cyan">
+                  <div class="skill-name">
+                    <span>JS</span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="skill-progress">
+
+                <div class=" thirty-eight-percent mb-orange">
+                  <div class="skill-name">
+                    <span>c++</span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="skill-progress">
+
+                <div class=" eighty-five-percent mb-red">
+                  <div class="skill-name">
+                    <span>oops</span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+
+            </div>
+
+
+
+
+<div class="skills-display">
+
+
+
+        </section>
+
+        <!-- projects section-->
+
+
+         <section id="education">
+
+
+          <h1 class="section-heading  mb75px  closeheading">
+
+            <span>
+              <img class="educationimg  resizing" src="images/education.png" alt="graduationhat">
+              </span>
+
+
+         <span> Education </span>
+
+         </h1>
+
+          <div class="timeline">
+
+            <div class="timeline-box highschool">
+              <h1 class="degree">Highshool</h1>
+              <h2 class="in"> Institue Name </h2>
+              <h3 class="time">
+                Month YYYY - Month YYYY
+              </h3>
+              <p class="description"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam, rerum sint est asperiores commodi amet qui dolorum eaque
+                 inventore labore perferendis reiciendis veniam consequatur et.
+                 Praesentium, earum. Distinctio, unde sint?</p>
+            </div>
+
+
+            <div class="timeline-box secondaryschool">
+
+              <h1 class="degree">Highshool</h1>
+              <h2 class="in"> Institue Name </h2>
+              <h3 class="time">
+                Month YYYY - Month YYYY
+              </h3>
+              <p class="description"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam, rerum sint est asperiores commodi amet qui dolorum eaque
+                 inventore labore perferendis reiciendis veniam consequatur et.
+                 Praesentium, earum. Distinctio, unde sint?</p>
+            </div>
+
+
+            <div class="timeline-box graduation">
+
+              <h1 class="degree">Highshool</h1>
+              <h2 class="in"> Institue Name </h2>
+              <h3 class="time">
+                Month YYYY - Month YYYY
+              </h3>
+              <p class="description"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam, rerum sint est asperiores commodi amet qui dolorum eaque
+                 inventore labore perferendis reiciendis veniam consequatur et.
+                 Praesentium, earum. Distinctio, unde sint?</p>
+
+
+            </div>
+
+            <div class="timeline-divider">
+
+              <div class="timeline-traveller">
+                <div>
+                  <img src="images/plane.png" alt="">
+                </div>
+            </div>
+
+
+            </div>
+
+          </div>
+
+         </section>
+
+
+         <section id="portfolio">
+          <!--  -->
+
+          <h1 class="section-heading mb75px" >
+
+            <span>
+              <img class="resizing" src="images/portfolio.png" alt="portfolio_img">
+            </span>
+
+            <span>Portfolio</span>
+
+          </h1>
+
+          <div class="portfolio-container">
+
+         <!-- <div class="portfolio-image-conatiner">
+            <!-- i'm thinking that i link my maid project few
+             with this website and then  add few images there so
+             that someone clicks on that image it leads to the made
+             projects-->
+
+           <!--- <a href="https://poetic-salamander-00a90c.netlify.app/" target="_blank">
+            -->
+
+        </div>
+
+
+         </section>
+
+         <section id="contact">
+          <!--  ek baat bataye agr tum yaha
+            "contact " is trh daaloge toh nahi kaam krega
+           islea inverted comma ke baad space mat do bhai  -->
+
+            <h1 class="section-heading  mb75px">
+
+              <span>
+                <img class="contactimg  resizing" src="images/contact_icon.png" alt="contact_pic">
+                </span>
+
+
+           <span> Contact </span>
+
+           </h1>
+
+
+           <div id="contact-container">
+              <div id="contact-form-container">
+                  <form id="contact-form" >
+                    <input id="input-name" name="name" type="text" placeholder="Your Name">
+
+
+                    <!-- AB yaha mujhe ek input wala chahiye jisme
+                     naam lena hai aur HUM PLACE HOLDER daalne chahte hai
+                     jisme humko YOUR NAME LIKHA HUAA aaye .
+                    -->
+                    <input id="input-email" name="input-email" type="text" placeholder="Your Email">
+
+                    <!-- NOw i want that people can give feedback so i am giving
+                    message area so for that i will use text-area that will allow me to take feedback
+                  -->
+
+
+                       <textarea id="input-message" name="input-message"   rows="2" cols="40" placeholder="Message"></textarea>
+
+                    <button class="sub-btn" type="submit">SEND MESSAGE</button>
+                  </form>
+
+
+              </div>
+
+              <div id="my-detail-container">
+
+                <h2 id="title-detail">Get in touch</h2>
+
+                <p class="chotkap"> If You Love webdevelopment or workout as much as i do .
+                  let's talk about it and we can code , discuss movies or even workout while we talk about it!!!</p>
+
+
+                <h2 id="myaddress"> My Address</h2>
+
+                <div class="my-details-info-container">
+                  <img src="images/location.png" alt="location">
+
+                  <span> India</span>
+              </div>
+              <div class="my-details-info-container">
+                 <img src="images/phone.png" alt="phone">
+                  <span>9197487503</span>
+              </div>
+              <div class="my-details-info-container">
+                <img src="images/mail.png" alt="mail">
+
+                  <span>myemail@gmail.com</span>
+
+              </div>
+
+
+
+              </div>
+
+
+
+           </div>
+
+
+           <div class="icons-name">
+            <ul class="horizontal-list text-center social-icons">
+
+             <li  > <a href="https://www.linkedin.com/in/vipul-raj-00a0101b6/">
+               <img src="images/in.png"  alt="linkedin"></a> </li>
+
+             <li> <a href="https://twitter.com/DarkBalerion69">
+                <img src="images/twitter.png" alt="twitter"></a> </li>
+
+                <li> <a href="https://github.com/rajvipulraj401">
+                  <img src="images/github.png" alt="github">
+                 </a></li>
+            </ul>
+          </div>
+
+
+
+         </section>
+
+<!--<footer class="copyright">
+
+  <p>@2023DarkBalerion69</p>
+</footer>>
+-->
+    </main>
+
+
+
+
+  </body>
+</html>
