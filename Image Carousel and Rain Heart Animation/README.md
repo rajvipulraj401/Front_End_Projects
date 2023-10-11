@@ -17,7 +17,7 @@ This repository contains the code for a simple image carousel implemented with H
 
 ## Live Demo
 
-To see a live demo of the Image Carousel and Rain Heart Animation in action, visit [Demo](https://6523f60abbfdc50470705b75--endearing-sprite-a5725e.netlify.app/).
+To see a live demo of the Image Carousel and Rain Heart Animation in action, visit [Demo](https://6524de8ebfb36c0becc95ef2--aesthetic-travesseiro-ac2785.netlify.app/).
 
 ## Usage
 
@@ -26,9 +26,9 @@ To see a live demo of the Image Carousel and Rain Heart Animation in action, vis
 3. Customize the JavaScript code in `index.js` to modify the behavior of the image carousel and heart animations.
 4. Save your changes and enjoy the updated effects!
 
-## Screenshots
+<!-- ## Screenshots
 
-Include any screenshots or examples of the Image Carousel and Rain Heart Animation in action.
+-->
 
 ## Contribution 🤝
 
