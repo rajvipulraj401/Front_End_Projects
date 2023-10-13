@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#0c112c" />
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#0c112c" />
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0c112c" />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/images/icons/favicon.png"
+    />
+
+    <!-- Add Google Font Here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Remix Icon -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" /> -->
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/stylesheet.css" />
+
+    <title>Filmoon - Movie App</title>
+    <meta name="title" content="Filmoon" />
+    <meta
+      name="description"
+      content="Filmoon is a feature-rich application that provides a seamless movie watching experience. Developed by Vishal, this popular app offers a vast collection of movies for users to explore and enjoy."
+    />
+
+    <!-- Personal JS -->
+    <script src="./assets/js/global.js" defer></script>
+    <script src="./assets/js/details.js" type="module" defer></script>
+  </head>
+  <body>
+    <!-- ! ~~~~~ Header ~~~~~ -->
+    <header class="header container">
+      <a href="./index.html" class="logo"
+        ><img
+          loading="lazy"
+          width="140"
+          src="./assets/images/icons/evolve logo.png"
+          alt="logo"
+      /></a>
+
+      <div class="search-box" search-box>
+        <div class="search-wrapper" search-wrapper>
+          <input
+            search-field
+            type="text"
+            name="search"
+            class="search-field"
+            autocomplete="off"
+            aria-label="search movies"
+            placeholder="Search any movies..."
+          />
+          <img
+            loading="lazy"
+            style="
+              filter: invert(98%) sepia(4%) saturate(252%) hue-rotate(319deg)
+                brightness(118%) contrast(100%);
+            "
+            class="leading-icon"
+            width="24"
+            height="24"
+            src="./assets/images/icons/search.svg"
+            alt="search"
+          />
+        </div>
+        <button class="search-btn" search-toggler>
+          <img
+            loading="lazy"
+            style="
+              filter: invert(98%) sepia(4%) saturate(252%) hue-rotate(319deg)
+                brightness(118%) contrast(100%);
+            "
+            width="24"
+            height="24"
+            src="./assets/images/icons/close.svg"
+            alt="close search box"
+          />
+        </button>
+      </div>
+
+      <button class="search-btn" search-toggler menu-close>
+        <img
+          loading="lazy"
+          style="
+            filter: invert(98%) sepia(4%) saturate(252%) hue-rotate(319deg)
+              brightness(118%) contrast(100%);
+          "
+          width="24"
+          height="24"
+          src="./assets/images/icons/search.svg"
+          alt="open search box"
+        />
+      </button>
+
+      <button class="menu-btn" menu-btn menu-toggler>
+        <img
+          loading="lazy"
+          style="
+            filter: invert(98%) sepia(4%) saturate(252%) hue-rotate(319deg)
+              brightness(118%) contrast(100%);
+          "
+          width="24"
+          height="24"
+          class="menu"
+          src="./assets/images/icons/menu.svg"
+          alt="open menu"
+        />
+        <img
+          loading="lazy"
+          style="
+            filter: invert(98%) sepia(4%) saturate(252%) hue-rotate(319deg)
+              brightness(118%) contrast(100%);
+          "
+          width="24"
+          height="24"
+          class="close"
+          src="./assets/images/icons/menu-close.svg"
+          alt="close menu"
+        />
+      </button>
+    </header>
+
+    <main>
+      <!-- ! ~~~~~ Sidebar ~~~~~ -->
+      <nav class="sidebar container" sidebar></nav>
+      <div class="overlay" overlay menu-toggler></div>
+
+      <!-- ! ~~~~~ Article ~~~~~ -->
+      <article class="article container" page-content>
+        <!-- ? ~~~~~ Movie Detail ~~~~~ -->
+        <!-- ? ~~~~~ Movie List ~~~~~ -->
+      </article>
+    </main>
+
+    <!-- ! ~~~~~ Footer ~~~~~ -->
+    <footer class="footer container py-3">
+      <p>Copyright &copy 2023 | All Rights Reserved</p>
+      <a target="_blank" href="https://github.com/rajvipulraj401"
+        ><strong>Owner_github</strong></a
+      >
+    </footer>
+  </body>
+</html>
