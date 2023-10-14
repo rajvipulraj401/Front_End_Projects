@@ -4,9 +4,9 @@ MovieFlix is a simple movie app that allows users to search for movies and get i
 
 ## 🌐 Live Demo
 
-You can check out the live demo of MovieFlix at [MovieFlix App](https://6529365a5efdfc2838c80290--transcendent-haupia-aa3378.netlify.app/)
+You can check out the live demo of MovieFlix at [MovieFlix App](https://652ac2cb6c9a3514730ed73d--boisterous-speculoos-53507b.netlify.app/)
 
-![App Screenshot](screenshot.png)
+<!-- ![App Screenshot](screenshot.png) -->
 
 ## Features
 
