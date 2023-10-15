@@ -4,13 +4,16 @@ import { api_key, fetchDataFromServer } from "./api.js";
 export function sidebar() {
   const genreList = {};
 
-  fetchDataFromServer(`https://api.themoviedb.org/3/genre/movie/list?api_key=${api_key}`, function ({ genres }) {
-    for (const { id, name } of genres) {
-      genreList[id] = name;
-    }
+  fetchDataFromServer(
+    `https://api.themoviedb.org/3/genre/movie/list?api_key=${api_key}`,
+    function ({ genres }) {
+      for (const { id, name } of genres) {
+        genreList[id] = name;
+      }
 
-    genreLink();
-  });
+      genreLink();
+    }
+  );
 
   const sidebarInner = document.createElement("div");
   sidebarInner.classList.add("sidebar-inner");
@@ -28,7 +31,7 @@ export function sidebar() {
     </div>
 
     <div class="sidebar-footer">
-      <p class="copyright">&copy Copyright ${new Date().getFullYear()} | <a class="copyright-link" href="https://vishalzen.netlify.app/">Portfolio</a></p>
+      <p class="copyright">&copy Copyright ${new Date().getFullYear()} | <a class="copyright-link" href="https://github.com/rajvipulraj401">Owner_github</a></p>
     </div>
   `;
 
@@ -38,7 +41,10 @@ export function sidebar() {
       link.classList.add("sidebar-link");
       link.setAttribute("href", "./movie-list.html");
       link.setAttribute("menu-close", "");
-      link.setAttribute("onclick", `getMovieList("with_genres=${genreId}","${genreName}")`);
+      link.setAttribute(
+        "onclick",
+        `getMovieList("with_genres=${genreId}","${genreName}")`
+      );
       link.textContent = genreName;
 
       sidebarInner.querySelectorAll(".sidebar-list")[0].appendChild(link);
